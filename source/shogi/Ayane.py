@@ -321,7 +321,7 @@ class UsiThinkResult:
         s = ""
         # pvを形にして出力する
         if len(self.pvs) == 1:
-            s += self.pvs[0].to_string()
+            s += self.pvs[0].to_string() + "\n"
         elif len(self.pvs) >= 2:
             for i,p in enumerate(self.pvs):
                 s += "multipv {0} {1}\n".format(i+1, p.to_string())
